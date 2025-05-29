@@ -28,8 +28,10 @@ namespace preprojetopap
         }
         private void main_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet13.Objetivos'. Você pode movê-la ou removê-la conforme necessário.
+            this.objetivosTableAdapter1.Fill(this.smartWorkoutDataSet13.Objetivos);
             // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet10.Objetivos'. Você pode movê-la ou removê-la conforme necessário.
-            this.objetivosTableAdapter.Fill(this.smartWorkoutDataSet10.Objetivos);
+            
             this.tipoTreinoTableAdapter.Fill(this.tipoDeTreinosTreinos.TipoTreino);
             this.vTreinosComNomeTipoTableAdapter.Fill(this.smartWorkoutDataSet1.vTreinosComNomeTipo);
 

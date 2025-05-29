@@ -33,6 +33,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -58,6 +60,8 @@
             this.tipoDeTreinosTreinosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smartWorkoutDataSet10 = new preprojetopap.SmartWorkoutDataSet10();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHam = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,19 +70,20 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.smartWorkoutDataSet10 = new preprojetopap.SmartWorkoutDataSet10();
-            this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.objetivosTableAdapter = new preprojetopap.SmartWorkoutDataSet10TableAdapters.ObjetivosTableAdapter();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracaoMetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataLimiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cumpridoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.smartWorkoutDataSet13 = new preprojetopap.SmartWorkoutDataSet13();
+            this.objetivosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.objetivosTableAdapter1 = new preprojetopap.SmartWorkoutDataSet13TableAdapters.ObjetivosTableAdapter();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracaoMetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataLimiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTreinosComNomeTipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet1)).BeginInit();
@@ -94,11 +99,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipoDeTreinosTreinosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.sidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet10)).BeginInit();
+            this.sidebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,6 +117,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 37);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::preprojetopap.Properties.Resources.FitTracker;
+            this.pictureBox2.Location = new System.Drawing.Point(380, -8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(72, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::preprojetopap.Properties.Resources.Close_preto;
+            this.pictureBox4.Location = new System.Drawing.Point(762, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label2
             // 
@@ -287,17 +317,27 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.descricaoDataGridViewTextBoxColumn,
-            this.duracaoMetaDataGridViewTextBoxColumn,
+            this.Id,
             this.tipoTreinoDesejadoDataGridViewTextBoxColumn,
+            this.duracaoMetaDataGridViewTextBoxColumn,
             this.dataLimiteDataGridViewTextBoxColumn,
-            this.cumpridoDataGridViewCheckBoxColumn});
-            this.dataGridView2.DataSource = this.objetivosBindingSource;
+            this.Notas});
+            this.dataGridView2.DataSource = this.objetivosBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(352, 244);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(448, 124);
             this.dataGridView2.TabIndex = 7;
+            // 
+            // objetivosBindingSource
+            // 
+            this.objetivosBindingSource.DataMember = "Objetivos";
+            this.objetivosBindingSource.DataSource = this.smartWorkoutDataSet10;
+            // 
+            // smartWorkoutDataSet10
+            // 
+            this.smartWorkoutDataSet10.DataSetName = "SmartWorkoutDataSet10";
+            this.smartWorkoutDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sidebar
             // 
@@ -438,79 +478,9 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::preprojetopap.Properties.Resources.FitTracker;
-            this.pictureBox2.Location = new System.Drawing.Point(380, -8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::preprojetopap.Properties.Resources.Close_preto;
-            this.pictureBox4.Location = new System.Drawing.Point(762, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // smartWorkoutDataSet10
-            // 
-            this.smartWorkoutDataSet10.DataSetName = "SmartWorkoutDataSet10";
-            this.smartWorkoutDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // objetivosBindingSource
-            // 
-            this.objetivosBindingSource.DataMember = "Objetivos";
-            this.objetivosBindingSource.DataSource = this.smartWorkoutDataSet10;
-            // 
             // objetivosTableAdapter
             // 
             this.objetivosTableAdapter.ClearBeforeFill = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // duracaoMetaDataGridViewTextBoxColumn
-            // 
-            this.duracaoMetaDataGridViewTextBoxColumn.DataPropertyName = "DuracaoMeta";
-            this.duracaoMetaDataGridViewTextBoxColumn.HeaderText = "DuracaoMeta";
-            this.duracaoMetaDataGridViewTextBoxColumn.Name = "duracaoMetaDataGridViewTextBoxColumn";
-            this.duracaoMetaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tipoTreinoDesejadoDataGridViewTextBoxColumn
-            // 
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.DataPropertyName = "TipoTreinoDesejado";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.HeaderText = "TipoTreinoDesejado";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.Name = "tipoTreinoDesejadoDataGridViewTextBoxColumn";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataLimiteDataGridViewTextBoxColumn
-            // 
-            this.dataLimiteDataGridViewTextBoxColumn.DataPropertyName = "DataLimite";
-            this.dataLimiteDataGridViewTextBoxColumn.HeaderText = "DataLimite";
-            this.dataLimiteDataGridViewTextBoxColumn.Name = "dataLimiteDataGridViewTextBoxColumn";
-            this.dataLimiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cumpridoDataGridViewCheckBoxColumn
-            // 
-            this.cumpridoDataGridViewCheckBoxColumn.DataPropertyName = "Cumprido";
-            this.cumpridoDataGridViewCheckBoxColumn.HeaderText = "Cumprido";
-            this.cumpridoDataGridViewCheckBoxColumn.Name = "cumpridoDataGridViewCheckBoxColumn";
-            this.cumpridoDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // label1
             // 
@@ -542,6 +512,55 @@
             this.label4.Text = "Treinos";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // smartWorkoutDataSet13
+            // 
+            this.smartWorkoutDataSet13.DataSetName = "SmartWorkoutDataSet13";
+            this.smartWorkoutDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // objetivosBindingSource1
+            // 
+            this.objetivosBindingSource1.DataMember = "Objetivos";
+            this.objetivosBindingSource1.DataSource = this.smartWorkoutDataSet13;
+            // 
+            // objetivosTableAdapter1
+            // 
+            this.objetivosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // tipoTreinoDesejadoDataGridViewTextBoxColumn
+            // 
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.DataPropertyName = "TipoTreinoDesejado";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.HeaderText = "TipoTreinoDesejado";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.Name = "tipoTreinoDesejadoDataGridViewTextBoxColumn";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duracaoMetaDataGridViewTextBoxColumn
+            // 
+            this.duracaoMetaDataGridViewTextBoxColumn.DataPropertyName = "DuracaoMeta";
+            this.duracaoMetaDataGridViewTextBoxColumn.HeaderText = "DuracaoMeta";
+            this.duracaoMetaDataGridViewTextBoxColumn.Name = "duracaoMetaDataGridViewTextBoxColumn";
+            this.duracaoMetaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataLimiteDataGridViewTextBoxColumn
+            // 
+            this.dataLimiteDataGridViewTextBoxColumn.DataPropertyName = "DataLimite";
+            this.dataLimiteDataGridViewTextBoxColumn.HeaderText = "DataLimite";
+            this.dataLimiteDataGridViewTextBoxColumn.Name = "dataLimiteDataGridViewTextBoxColumn";
+            this.dataLimiteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Notas
+            // 
+            this.Notas.DataPropertyName = "Notas";
+            this.Notas.HeaderText = "Notas";
+            this.Notas.Name = "Notas";
+            this.Notas.ReadOnly = true;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +583,8 @@
             this.Load += new System.EventHandler(this.main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTreinosComNomeTipoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet1)).EndInit();
@@ -579,11 +600,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipoDeTreinosTreinosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.sidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet10)).EndInit();
+            this.sidebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,12 +651,15 @@
         private SmartWorkoutDataSet10 smartWorkoutDataSet10;
         private System.Windows.Forms.BindingSource objetivosBindingSource;
         private SmartWorkoutDataSet10TableAdapters.ObjetivosTableAdapter objetivosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoMetaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTreinoDesejadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn cumpridoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private SmartWorkoutDataSet13 smartWorkoutDataSet13;
+        private System.Windows.Forms.BindingSource objetivosBindingSource1;
+        private SmartWorkoutDataSet13TableAdapters.ObjetivosTableAdapter objetivosTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoTreinoDesejadoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracaoMetaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataLimiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Notas;
     }
 }

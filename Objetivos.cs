@@ -24,28 +24,32 @@ namespace preprojetopap
             string connString = "Server=(localdb)\\MSSQLLocalDB;Database=SmartWorkout;Trusted_Connection=True";
 
             string query = @"
-               SELECT 
-    O.Id,
-    O.IdUtilizador,
-    O.Descricao,
-    O.DuracaoMeta,
-    O.TipoTreinoDesejado,
-    O.DataLimite,
-    ISNULL(TT.Nome, 'Todos os tipos') AS TipoTreino,
-    ISNULL(SUM(T.Duracao), 0) AS TotalFeito,
-    CASE 
-        WHEN ISNULL(SUM(T.Duracao), 0) >= O.DuracaoMeta THEN '✅'
-        ELSE '❌'
-    END AS Estado
-FROM Objetivos O
-LEFT JOIN TipoTreino TT ON O.TipoTreinoDesejado = TT.Id
-LEFT JOIN Treinos T ON 
-    T.IdUtilizador = O.IdUtilizador
-    AND (O.TipoTreinoDesejado IS NULL OR T.IdTipoTreino = O.TipoTreinoDesejado)
-    AND T.Data <= O.DataLimite
-WHERE O.IdUtilizador = @id
-GROUP BY O.Id, O.IdUtilizador, O.Descricao, O.DuracaoMeta, O.TipoTreinoDesejado, O.DataLimite, TT.Nome
+    SELECT 
+        O.Id,
+        O.IdUtilizador,
+        O.Notas,
+        O.DuracaoMeta,
+        O.TipoTreinoDesejado,
+        O.DataLimite,
+        ISNULL(TT.Nome, 'Todos os tipos') AS TipoTreino,
+        ISNULL(SUM(T.Duracao), 0) AS TotalFeito
+    FROM Objetivos O
+    LEFT JOIN TipoTreino TT ON O.TipoTreinoDesejado = TT.Id
+    LEFT JOIN Treinos T ON 
+        T.IdUtilizador = O.IdUtilizador
+        AND (O.TipoTreinoDesejado IS NULL OR T.IdTipoTreino = O.TipoTreinoDesejado)
+        AND T.Data <= O.DataLimite
+    WHERE O.IdUtilizador = @id
+    GROUP BY 
+        O.Id, 
+        O.IdUtilizador, 
+        O.Notas, 
+        O.DuracaoMeta, 
+        O.TipoTreinoDesejado, 
+        O.DataLimite, 
+        TT.Nome
 ";
+
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -143,10 +147,14 @@ GROUP BY O.Id, O.IdUtilizador, O.Descricao, O.DuracaoMeta, O.TipoTreinoDesejado,
 
         private void Objetivos_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet12.Objetivos'. Você pode movê-la ou removê-la conforme necessário.
+            this.objetivosTableAdapter2.Fill(this.smartWorkoutDataSet12.Objetivos);
+            // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet11.Objetivos'. Você pode movê-la ou removê-la conforme necessário.
+            this.objetivosTableAdapter1.Fill(this.smartWorkoutDataSet11.Objetivos);
             // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet9.TipoTreino'. Você pode movê-la ou removê-la conforme necessário.
             this.tipoTreinoTableAdapter.Fill(this.smartWorkoutDataSet9.TipoTreino);
             // TODO: esta linha de código carrega dados na tabela 'smartWorkoutDataSet8.Objetivos'. Você pode movê-la ou removê-la conforme necessário.
-            this.objetivosTableAdapter.Fill(this.smartWorkoutDataSet8.Objetivos);
+            
 
         }
 
@@ -164,36 +172,28 @@ GROUP BY O.Id, O.IdUtilizador, O.Descricao, O.DuracaoMeta, O.TipoTreinoDesejado,
             object tipoTreino = comboBox1.SelectedValue ?? DBNull.Value;
 
             using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlCommand cmd = new SqlCommand(@"
+        INSERT INTO Objetivos 
+            (IdUtilizador, Notas, DuracaoMeta, TipoTreinoDesejado, DataLimite)
+        VALUES 
+            (@idUtilizador, @descricao, @duracao, @tipoTreino, @dataLimite)", conn))
             {
+                cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
+                cmd.Parameters.AddWithValue("@descricao", descricao);
+                cmd.Parameters.AddWithValue("@duracao", duracao);
+                cmd.Parameters.AddWithValue("@tipoTreino", tipoTreino);
+                cmd.Parameters.AddWithValue("@dataLimite", dataLimite);
+
                 conn.Open();
-                string query = @"INSERT INTO Objetivos (IdUtilizador, Descricao, DuracaoMeta, TipoTreinoDesejado, DataLimite)
-                         VALUES (@idUtilizador, @descricao, @duracao, @tipoTreino, @dataLimite)";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
-                    cmd.Parameters.AddWithValue("@descricao", descricao);
-                    cmd.Parameters.AddWithValue("@duracao", duracao);
-                    cmd.Parameters.AddWithValue("@tipoTreino", tipoTreino);
-                    cmd.Parameters.AddWithValue("@dataLimite", dataLimite);
-                    cmd.ExecuteNonQuery();
-                      int linhasInseridas = cmd.ExecuteNonQuery();
+                int linhasInseridas = cmd.ExecuteNonQuery();
 
-            if (linhasInseridas > 0)
-            {
-                MessageBox.Show("Objetivo adicionado com sucesso!");
-            }
-            else
-            {
-                MessageBox.Show("Erro ao adicionar objetivo.");
-            }
-                      
-                      
-                }
+                if (linhasInseridas > 0)
+                    MessageBox.Show("Objetivo adicionado com sucesso!");
+                else
+                    MessageBox.Show("Erro ao adicionar objetivo.");
             }
 
-            
-
-            CarregarObjetivos(); 
+            CarregarObjetivos();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -210,39 +210,31 @@ GROUP BY O.Id, O.IdUtilizador, O.Descricao, O.DuracaoMeta, O.TipoTreinoDesejado,
             object tipoTreino = comboBox1.SelectedValue ?? DBNull.Value;
 
             using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlCommand cmd = new SqlCommand(@"
+        UPDATE Objetivos
+        SET 
+            Notas = @descricao,
+            DuracaoMeta = @duracao,
+            TipoTreinoDesejado = @tipoTreino,
+            DataLimite = @dataLimite
+        WHERE 
+            Id = @id AND IdUtilizador = @idUtilizador", conn))
             {
+                cmd.Parameters.AddWithValue("@descricao", descricao);
+                cmd.Parameters.AddWithValue("@duracao", duracao);
+                cmd.Parameters.AddWithValue("@tipoTreino", tipoTreino);
+                cmd.Parameters.AddWithValue("@dataLimite", dataLimite);
+                cmd.Parameters.AddWithValue("@id", idObjetivo);
+                cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
+
                 conn.Open();
-                string query = @"UPDATE Objetivos
-                         SET Descricao = @descricao,
-                             DuracaoMeta = @duracao,
-                             TipoTreinoDesejado = @tipoTreino,
-                             DataLimite = @dataLimite
-                         WHERE Id = @id AND IdUtilizador = @idUtilizador";
+                int linhasAfetadas = cmd.ExecuteNonQuery();
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@descricao", descricao);
-                    cmd.Parameters.AddWithValue("@duracao", duracao);
-                    cmd.Parameters.AddWithValue("@tipoTreino", tipoTreino);
-                    cmd.Parameters.AddWithValue("@dataLimite", dataLimite);
-                    cmd.Parameters.AddWithValue("@id", idObjetivo);
-                    cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
-                    cmd.ExecuteNonQuery();
-                     int linhasAfetadas = cmd.ExecuteNonQuery();
-
-            if (linhasAfetadas > 0)
-            {
-                MessageBox.Show("Objetivo editado com sucesso!");
+                if (linhasAfetadas > 0)
+                    MessageBox.Show("Objetivo editado com sucesso!");
+                else
+                    MessageBox.Show("Erro: Nenhum objetivo foi alterado. Verifica o ID ou os dados.");
             }
-            else
-            {
-                MessageBox.Show("Erro: Nenhum objetivo foi alterado. Verifica o ID ou os dados.");
-            }
-
-                }
-            }
-
-            
 
             CarregarObjetivos();
         }
@@ -256,31 +248,21 @@ GROUP BY O.Id, O.IdUtilizador, O.Descricao, O.DuracaoMeta, O.TipoTreinoDesejado,
             }
 
             using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlCommand cmd = new SqlCommand(@"
+        DELETE FROM Objetivos 
+        WHERE Id = @id AND IdUtilizador = @idUtilizador", conn))
             {
+                cmd.Parameters.AddWithValue("@id", idObjetivo);
+                cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
+
                 conn.Open();
-                string query = "DELETE FROM Objetivos WHERE Id = @id AND IdUtilizador = @idUtilizador";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", idObjetivo);
-                    cmd.Parameters.AddWithValue("@idUtilizador", SessaoUtilizador.Id);
-                    cmd.ExecuteNonQuery();
-                  int linhasApagadas = cmd.ExecuteNonQuery();
+                int linhasApagadas = cmd.ExecuteNonQuery();
 
-            if (linhasApagadas > 0)
-            {
-                MessageBox.Show("Objetivo removido com sucesso!");
+                if (linhasApagadas > 0)
+                    MessageBox.Show("Objetivo removido com sucesso!");
+                else
+                    MessageBox.Show("Erro: Nenhum objetivo foi removido. Verifica o ID.");
             }
-            else
-            {
-                MessageBox.Show("Erro: Nenhum objetivo foi removido. Verifica o ID.");
-            }
-
-
-                }
-
-            }
-
-            
 
             CarregarObjetivos();
         }

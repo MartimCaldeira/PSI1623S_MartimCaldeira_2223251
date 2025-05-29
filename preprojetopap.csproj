@@ -119,6 +119,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SmartWorkoutDataSet10.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SmartWorkoutDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet13.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SmartWorkoutDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -249,6 +264,39 @@
     </None>
     <None Include="SmartWorkoutDataSet10.xss">
       <DependentUpon>SmartWorkoutDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet11.xsc">
+      <DependentUpon>SmartWorkoutDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet11.xss">
+      <DependentUpon>SmartWorkoutDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet12.xsc">
+      <DependentUpon>SmartWorkoutDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet12.xss">
+      <DependentUpon>SmartWorkoutDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet13.xsc">
+      <DependentUpon>SmartWorkoutDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet13.xss">
+      <DependentUpon>SmartWorkoutDataSet13.xsd</DependentUpon>
     </None>
     <None Include="SmartWorkoutDataSet2.xsc">
       <DependentUpon>SmartWorkoutDataSet2.xsd</DependentUpon>
