@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SmartWorkoutDataSet1" targetNamespace="http://tempuri.org/SmartWorkoutDataSet1.xsd" xmlns:mstns="http://tempuri.org/SmartWorkoutDataSet1.xsd" xmlns="http://tempuri.org/SmartWorkoutDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SmartWorkoutConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SmartWorkoutConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.preprojetopap.Properties.Settings.GlobalReference.Default.SmartWorkoutConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vTreinosComNomeTipoTableAdapter" GeneratorDataComponentClassName="vTreinosComNomeTipoTableAdapter" Name="vTreinosComNomeTipo" UserDataComponentName="vTreinosComNomeTipoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SmartWorkoutConnectionString (Settings)" DbObjectName="SmartWorkout.dbo.vTreinosComNomeTipo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Data, TipoDeTreino, Duracao, Notas, IdUtilizador FROM dbo.vTreinosComNomeTipo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Data" DataSetColumn="Data" />
+              <Mapping SourceColumn="TipoDeTreino" DataSetColumn="TipoDeTreino" />
+              <Mapping SourceColumn="Duracao" DataSetColumn="Duracao" />
+              <Mapping SourceColumn="Notas" DataSetColumn="Notas" />
+              <Mapping SourceColumn="IdUtilizador" DataSetColumn="IdUtilizador" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SmartWorkoutDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SmartWorkoutDataSet1" msprop:Generator_DataSetName="SmartWorkoutDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vTreinosComNomeTipo" msprop:Generator_RowEvHandlerName="vTreinosComNomeTipoRowChangeEventHandler" msprop:Generator_RowDeletedName="vTreinosComNomeTipoRowDeleted" msprop:Generator_RowDeletingName="vTreinosComNomeTipoRowDeleting" msprop:Generator_RowEvArgName="vTreinosComNomeTipoRowChangeEvent" msprop:Generator_TablePropName="vTreinosComNomeTipo" msprop:Generator_RowChangedName="vTreinosComNomeTipoRowChanged" msprop:Generator_RowChangingName="vTreinosComNomeTipoRowChanging" msprop:Generator_TableClassName="vTreinosComNomeTipoDataTable" msprop:Generator_RowClassName="vTreinosComNomeTipoRow" msprop:Generator_TableVarName="tablevTreinosComNomeTipo" msprop:Generator_UserTableName="vTreinosComNomeTipo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Data" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnPropNameInTable="DataColumn" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_UserColumnName="Data" type="xs:dateTime" />
+              <xs:element name="TipoDeTreino" msprop:Generator_ColumnPropNameInRow="TipoDeTreino" msprop:Generator_ColumnPropNameInTable="TipoDeTreinoColumn" msprop:Generator_ColumnVarNameInTable="columnTipoDeTreino" msprop:Generator_UserColumnName="TipoDeTreino">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Duracao" msprop:Generator_ColumnPropNameInRow="Duracao" msprop:Generator_ColumnPropNameInTable="DuracaoColumn" msprop:Generator_ColumnVarNameInTable="columnDuracao" msprop:Generator_UserColumnName="Duracao" type="xs:int" />
+              <xs:element name="Notas" msprop:Generator_ColumnPropNameInRow="Notas" msprop:Generator_ColumnPropNameInTable="NotasColumn" msprop:Generator_ColumnVarNameInTable="columnNotas" msprop:Generator_UserColumnName="Notas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdUtilizador" msprop:Generator_ColumnPropNameInRow="IdUtilizador" msprop:Generator_ColumnPropNameInTable="IdUtilizadorColumn" msprop:Generator_ColumnVarNameInTable="columnIdUtilizador" msprop:Generator_UserColumnName="IdUtilizador" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vTreinosComNomeTipo" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

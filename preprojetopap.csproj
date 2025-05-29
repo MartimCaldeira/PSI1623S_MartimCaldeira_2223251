@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A355CDF5-3F4A-4736-9EEA-B7832E04F87F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>preprojetopap</RootNamespace>
+    <AssemblyName>preprojetopap</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adicionarTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adicionarTreino.Designer.cs">
+      <DependentUpon>adicionarTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CriarNovaContaNova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarNovaContaNova.Designer.cs">
+      <DependentUpon>CriarNovaContaNova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarPerfil.Designer.cs">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarTreino.Designer.cs">
+      <DependentUpon>EditarTreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Objetivos.Designer.cs">
+      <DependentUpon>Objetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perfil.Designer.cs">
+      <DependentUpon>perfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Removertreino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Removertreino.Designer.cs">
+      <DependentUpon>Removertreino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessaoUtilizador.cs" />
+    <Compile Include="SmartWorkoutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="teste login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teste login.Designer.cs">
+      <DependentUpon>teste login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tipoDeTreinosTreinos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tipoDeTreinosTreinos.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adicionarTreino.resx">
+      <DependentUpon>adicionarTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarNovaContaNova.resx">
+      <DependentUpon>CriarNovaContaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarPerfil.resx">
+      <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarTreino.resx">
+      <DependentUpon>EditarTreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Objetivos.resx">
+      <DependentUpon>Objetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perfil.resx">
+      <DependentUpon>perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Removertreino.resx">
+      <DependentUpon>Removertreino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teste login.resx">
+      <DependentUpon>teste login.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SmartWorkoutDataSet.xsc">
+      <DependentUpon>SmartWorkoutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet.xss">
+      <DependentUpon>SmartWorkoutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet1.xsc">
+      <DependentUpon>SmartWorkoutDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet1.xss">
+      <DependentUpon>SmartWorkoutDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet10.xsc">
+      <DependentUpon>SmartWorkoutDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet10.xss">
+      <DependentUpon>SmartWorkoutDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet2.xsc">
+      <DependentUpon>SmartWorkoutDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet2.xss">
+      <DependentUpon>SmartWorkoutDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet3.xsc">
+      <DependentUpon>SmartWorkoutDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet3.xss">
+      <DependentUpon>SmartWorkoutDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet4.xsc">
+      <DependentUpon>SmartWorkoutDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet4.xss">
+      <DependentUpon>SmartWorkoutDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet5.xsc">
+      <DependentUpon>SmartWorkoutDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet5.xss">
+      <DependentUpon>SmartWorkoutDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet6.xsc">
+      <DependentUpon>SmartWorkoutDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet6.xss">
+      <DependentUpon>SmartWorkoutDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet7.xsc">
+      <DependentUpon>SmartWorkoutDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet7.xss">
+      <DependentUpon>SmartWorkoutDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet8.xsc">
+      <DependentUpon>SmartWorkoutDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet8.xss">
+      <DependentUpon>SmartWorkoutDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet9.xsc">
+      <DependentUpon>SmartWorkoutDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutDataSet9.xss">
+      <DependentUpon>SmartWorkoutDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="tipoDeTreinosTreinos.xsc">
+      <DependentUpon>tipoDeTreinosTreinos.xsd</DependentUpon>
+    </None>
+    <None Include="tipoDeTreinosTreinos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tipoDeTreinosTreinos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tipoDeTreinosTreinos.xss">
+      <DependentUpon>tipoDeTreinosTreinos.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FitTracker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\porfile_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vê e regista os teus treinos %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_220436.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vê e regista os teus treinos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As estatiticas do seu treio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As estatiticas do seu treio %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\porfile_icon preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar icon preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\As estatiticas do seu treio %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\objetivo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
