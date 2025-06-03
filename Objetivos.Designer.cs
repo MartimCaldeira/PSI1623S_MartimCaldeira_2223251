@@ -63,17 +63,17 @@
             this.tipoTreinoTableAdapter = new preprojetopap.SmartWorkoutDataSet9TableAdapters.TipoTreinoTableAdapter();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dataGridViewObjetivos = new System.Windows.Forms.DataGridView();
-            this.smartWorkoutDataSet11 = new preprojetopap.SmartWorkoutDataSet11();
-            this.objetivosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.objetivosTableAdapter1 = new preprojetopap.SmartWorkoutDataSet11TableAdapters.ObjetivosTableAdapter();
-            this.smartWorkoutDataSet12 = new preprojetopap.SmartWorkoutDataSet12();
-            this.objetivosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.objetivosTableAdapter2 = new preprojetopap.SmartWorkoutDataSet12TableAdapters.ObjetivosTableAdapter();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoTreinoDesejadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracaoMetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataLimite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objetivosBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.smartWorkoutDataSet12 = new preprojetopap.SmartWorkoutDataSet12();
+            this.smartWorkoutDataSet11 = new preprojetopap.SmartWorkoutDataSet11();
+            this.objetivosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.objetivosTableAdapter1 = new preprojetopap.SmartWorkoutDataSet11TableAdapters.ObjetivosTableAdapter();
+            this.objetivosTableAdapter2 = new preprojetopap.SmartWorkoutDataSet12TableAdapters.ObjetivosTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -84,10 +84,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObjetivos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,9 +134,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(262, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 13);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SmartWorkout - Objetivo";
+            this.label2.Text = "FitTracker - Objetivo";
             // 
             // sidebar
             // 
@@ -520,34 +520,6 @@
             this.dataGridViewObjetivos.Size = new System.Drawing.Size(543, 124);
             this.dataGridViewObjetivos.TabIndex = 47;
             // 
-            // smartWorkoutDataSet11
-            // 
-            this.smartWorkoutDataSet11.DataSetName = "SmartWorkoutDataSet11";
-            this.smartWorkoutDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // objetivosBindingSource1
-            // 
-            this.objetivosBindingSource1.DataMember = "Objetivos";
-            this.objetivosBindingSource1.DataSource = this.smartWorkoutDataSet11;
-            // 
-            // objetivosTableAdapter1
-            // 
-            this.objetivosTableAdapter1.ClearBeforeFill = true;
-            // 
-            // smartWorkoutDataSet12
-            // 
-            this.smartWorkoutDataSet12.DataSetName = "SmartWorkoutDataSet12";
-            this.smartWorkoutDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // objetivosBindingSource2
-            // 
-            this.objetivosBindingSource2.DataMember = "Objetivos";
-            this.objetivosBindingSource2.DataSource = this.smartWorkoutDataSet12;
-            // 
-            // objetivosTableAdapter2
-            // 
-            this.objetivosTableAdapter2.ClearBeforeFill = true;
-            // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
@@ -582,6 +554,34 @@
             this.Notas.HeaderText = "Notas";
             this.Notas.Name = "Notas";
             this.Notas.ReadOnly = true;
+            // 
+            // objetivosBindingSource2
+            // 
+            this.objetivosBindingSource2.DataMember = "Objetivos";
+            this.objetivosBindingSource2.DataSource = this.smartWorkoutDataSet12;
+            // 
+            // smartWorkoutDataSet12
+            // 
+            this.smartWorkoutDataSet12.DataSetName = "SmartWorkoutDataSet12";
+            this.smartWorkoutDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // smartWorkoutDataSet11
+            // 
+            this.smartWorkoutDataSet11.DataSetName = "SmartWorkoutDataSet11";
+            this.smartWorkoutDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // objetivosBindingSource1
+            // 
+            this.objetivosBindingSource1.DataMember = "Objetivos";
+            this.objetivosBindingSource1.DataSource = this.smartWorkoutDataSet11;
+            // 
+            // objetivosTableAdapter1
+            // 
+            this.objetivosTableAdapter1.ClearBeforeFill = true;
+            // 
+            // objetivosTableAdapter2
+            // 
+            this.objetivosTableAdapter2.ClearBeforeFill = true;
             // 
             // Objetivos
             // 
@@ -621,10 +621,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObjetivos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

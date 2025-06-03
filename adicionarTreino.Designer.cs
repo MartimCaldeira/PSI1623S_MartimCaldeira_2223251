@@ -45,6 +45,7 @@
             this.sidebarTrasition = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tipoTreinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smartWorkoutDataSet4 = new preprojetopap.SmartWorkoutDataSet4();
@@ -55,15 +56,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tipoTreinoTableAdapter = new preprojetopap.SmartWorkoutDataSet4TableAdapters.TipoTreinoTableAdapter();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.sidebar.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,9 +110,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(193, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 13);
+            this.label2.Size = new System.Drawing.Size(141, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SmartWorkout - Adicionar Treino";
+            this.label2.Text = "FitTracker - Adicionar Treino";
             // 
             // sidebar
             // 
@@ -285,6 +285,18 @@
             this.panel2.TabIndex = 12;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox3.BorderRadius = 10;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox3.Location = new System.Drawing.Point(13, 91);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.Size = new System.Drawing.Size(125, 27);
+            this.guna2TextBox3.TabIndex = 37;
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -401,18 +413,6 @@
             // 
             this.tipoTreinoTableAdapter.ClearBeforeFill = true;
             // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox3.BorderRadius = 10;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.Location = new System.Drawing.Point(13, 91);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.Size = new System.Drawing.Size(125, 27);
-            this.guna2TextBox3.TabIndex = 37;
-            // 
             // adicionarTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,9 +436,9 @@
             this.sidebar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

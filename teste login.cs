@@ -88,5 +88,17 @@ namespace preprojetopap
                 }
             }
         }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox1.Checked)
+            {
+                TextBox2.PasswordChar = '\0';
+            }
+            else if (!guna2CheckBox1.Checked)
+            {
+                TextBox2.PasswordChar = '*';
+            }
+        }
     }
 }

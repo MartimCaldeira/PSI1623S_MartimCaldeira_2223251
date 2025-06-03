@@ -61,9 +61,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(249, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 13);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "SmartWorkout - Perfil";
+            this.label2.Text = "FitTracker - Perfil";
             // 
             // sidebarTrasition
             // 

@@ -48,6 +48,7 @@
             this.vTreinosComNomeTipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smartWorkoutDataSet6 = new preprojetopap.SmartWorkoutDataSet6();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tipoTreinoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.smartWorkoutDataSet7 = new preprojetopap.SmartWorkoutDataSet7();
@@ -64,17 +65,16 @@
             this.tipoTreinoTableAdapter = new preprojetopap.SmartWorkoutDataSet7TableAdapters.TipoTreinoTableAdapter();
             this.sidebarTrasition = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vTreinosComNomeTipoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet6)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -97,9 +97,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(210, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 13);
+            this.label2.Size = new System.Drawing.Size(124, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SmartWorkout - Editar Treino";
+            this.label2.Text = "FitTracker - Editar Treino";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // sidebar
@@ -324,6 +324,18 @@
             this.panel2.TabIndex = 28;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TextBox1.BorderRadius = 10;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.Location = new System.Drawing.Point(271, 92);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.Size = new System.Drawing.Size(125, 27);
+            this.guna2TextBox1.TabIndex = 38;
+            // 
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -459,7 +471,7 @@
             this.Confirmar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Confirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Confirmar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Confirmar.FillColor = System.Drawing.Color.Black;
+            this.Confirmar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
             this.Confirmar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Confirmar.ForeColor = System.Drawing.Color.White;
             this.Confirmar.Location = new System.Drawing.Point(423, 6);
@@ -504,18 +516,6 @@
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
             // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.Location = new System.Drawing.Point(271, 92);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.Size = new System.Drawing.Size(125, 27);
-            this.guna2TextBox1.TabIndex = 38;
-            // 
             // EditarTreino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,10 +540,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet6)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoTreinoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2TextBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

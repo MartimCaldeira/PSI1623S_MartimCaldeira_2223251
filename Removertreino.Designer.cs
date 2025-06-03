@@ -107,7 +107,7 @@
             this.Confirmar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.Confirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Confirmar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Confirmar.FillColor = System.Drawing.Color.Black;
+            this.Confirmar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
             this.Confirmar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Confirmar.ForeColor = System.Drawing.Color.White;
             this.Confirmar.Location = new System.Drawing.Point(94, 84);
@@ -209,9 +209,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(200, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 13);
+            this.label2.Size = new System.Drawing.Size(140, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SmartWorkout - Remover Treino";
+            this.label2.Text = "FitTracker - Remover Treino";
             // 
             // pictureBox2
             // 
