@@ -482,5 +482,8 @@
   <ItemGroup>
     <None Include="Resources\Camera.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vê e regista os teus treinos %282%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -211,7 +211,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackgroundImage = global::preprojetopap.Properties.Resources.Vê_e_regista_os_teus_treinos__1_;
+            this.guna2Panel1.BackgroundImage = global::preprojetopap.Properties.Resources.Vê_e_regista_os_teus_treinos__2_;
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.Location = new System.Drawing.Point(259, 12);
             this.guna2Panel1.Name = "guna2Panel1";

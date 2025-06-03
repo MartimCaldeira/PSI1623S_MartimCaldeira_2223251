@@ -329,5 +329,15 @@ namespace preprojetopap.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vê_e_regista_os_teus_treinos__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Vê e regista os teus treinos (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

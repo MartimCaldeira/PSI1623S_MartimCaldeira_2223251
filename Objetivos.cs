@@ -18,14 +18,14 @@ namespace preprojetopap
             InitializeComponent();
             CarregarObjetivos();
             guna2DateTimePicker1.MinDate = DateTime.Today;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 62, 80);
-            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(65, 105, 225);
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView1.RowHeadersVisible = false;
+            dataGridViewObjetivos.EnableHeadersVisualStyles = false;
+            dataGridViewObjetivos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 62, 80);
+            dataGridViewObjetivos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridViewObjetivos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            dataGridViewObjetivos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewObjetivos.DefaultCellStyle.SelectionBackColor = Color.FromArgb(65, 105, 225);
+            dataGridViewObjetivos.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewObjetivos.RowHeadersVisible = false;
         }
         private void CarregarObjetivos()
         {
