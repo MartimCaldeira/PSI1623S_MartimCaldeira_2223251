@@ -38,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHam = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -50,7 +49,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -77,17 +75,16 @@
             this.guna2Panel1.AutoRoundedCorners = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Panel1.BorderRadius = 106;
+            this.guna2Panel1.BorderRadius = 54;
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(252, 121);
+            this.guna2Panel1.Location = new System.Drawing.Point(268, 180);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(376, 214);
+            this.guna2Panel1.Size = new System.Drawing.Size(376, 111);
             this.guna2Panel1.TabIndex = 13;
             // 
             // guna2Button2
@@ -101,11 +98,11 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(27, 26);
+            this.guna2Button2.Location = new System.Drawing.Point(260, 3);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(97, 38);
             this.guna2Button2.TabIndex = 8;
-            this.guna2Button2.Text = "Atualizar Informações";
+            this.guna2Button2.Text = "Recaregar informações";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
@@ -119,7 +116,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(264, 26);
+            this.guna2Button1.Location = new System.Drawing.Point(260, 59);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(97, 38);
             this.guna2Button1.TabIndex = 7;
@@ -130,7 +127,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(144, 169);
+            this.label6.Location = new System.Drawing.Point(133, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 5;
@@ -140,7 +137,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(82, 136);
+            this.label5.Location = new System.Drawing.Point(71, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
             this.label5.TabIndex = 4;
@@ -150,7 +147,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 169);
+            this.label3.Location = new System.Drawing.Point(13, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 16);
             this.label3.TabIndex = 2;
@@ -160,21 +157,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 136);
+            this.label1.Location = new System.Drawing.Point(13, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::preprojetopap.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(154, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 72);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // sidebar
             // 
@@ -360,7 +347,6 @@
             this.Text = "perfil";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -383,7 +369,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer sidebarTrasition;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
