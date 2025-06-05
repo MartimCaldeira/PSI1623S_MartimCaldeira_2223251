@@ -22,7 +22,7 @@ namespace preprojetopap
 
         }
 
-        bool sidebarExpand = true;
+        bool sidebarExpand = false;
         private void sidebarTrasition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -161,6 +161,11 @@ namespace preprojetopap
             objetivos.Show();
 
             this.Close();
+        }
+
+        private void guna2DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

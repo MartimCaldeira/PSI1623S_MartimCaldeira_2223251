@@ -129,7 +129,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(164, 451);
+            this.sidebar.Size = new System.Drawing.Size(41, 451);
             this.sidebar.TabIndex = 6;
             // 
             // btnHam
@@ -336,6 +336,7 @@
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(177, 36);
             this.guna2DateTimePicker1.TabIndex = 24;
             this.guna2DateTimePicker1.Value = new System.DateTime(2025, 5, 13, 15, 37, 30, 676);
+            this.guna2DateTimePicker1.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // guna2TextBox2
             // 

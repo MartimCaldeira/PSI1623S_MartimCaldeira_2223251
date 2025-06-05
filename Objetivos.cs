@@ -80,7 +80,7 @@ namespace preprojetopap
 
         }
 
-        bool sidebarExpand = true;
+        bool sidebarExpand = false;
         private void sidebarTrasition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)

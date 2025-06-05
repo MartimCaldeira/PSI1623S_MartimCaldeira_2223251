@@ -163,7 +163,7 @@ namespace preprojetopap
             guna2TextBox1.Text = "";
             CarregarTreinos();
         }
-        bool sidebarExpand = true;
+        bool sidebarExpand = false;
         
 
         private void sidebarTrasition_Tick(object sender, EventArgs e)

@@ -390,7 +390,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.sidebar.Size = new System.Drawing.Size(164, 451);
+            this.sidebar.Size = new System.Drawing.Size(41, 451);
             this.sidebar.TabIndex = 5;
             // 
             // btnHam

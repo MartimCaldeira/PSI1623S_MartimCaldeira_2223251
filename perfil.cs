@@ -54,7 +54,7 @@ namespace preprojetopap
         {
             sidebarTrasition.Start();
         }
-        bool sidebarExpand = true;
+        bool sidebarExpand = false;
         private void sidebarTrasition_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -166,8 +166,10 @@ namespace preprojetopap
 
             this.Close();
         }
-      
 
-       
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }
