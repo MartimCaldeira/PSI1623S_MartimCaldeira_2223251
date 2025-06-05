@@ -246,6 +246,7 @@
             this.Name = "CriarNovaContaNova";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CriarNovaContaNova";
+            this.Load += new System.EventHandler(this.CriarNovaContaNova_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

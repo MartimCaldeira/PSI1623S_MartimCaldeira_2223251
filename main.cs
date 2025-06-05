@@ -19,7 +19,7 @@ namespace preprojetopap
         public main()
         {
             InitializeComponent();
-           
+            CarregarObjetivos();
 
             label3.Text = "Bem-vindo(a), " + SessaoUtilizador.Nome + "!";
             dataGridView1.AutoGenerateColumns = true;
@@ -31,16 +31,63 @@ namespace preprojetopap
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(65, 105, 225);
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.EnableHeadersVisualStyles = false;
-            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 62, 80);
-            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-            dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(65, 105, 225);
-            dataGridView2.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dataGridView2.RowHeadersVisible = false;
+            dataGridViewObjetivos.RowHeadersVisible = false;
+            dataGridViewObjetivos.EnableHeadersVisualStyles = false;
+            dataGridViewObjetivos.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 62, 80);
+            dataGridViewObjetivos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridViewObjetivos.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            dataGridViewObjetivos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewObjetivos.DefaultCellStyle.SelectionBackColor = Color.FromArgb(65, 105, 225);
+            dataGridViewObjetivos.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewObjetivos.RowHeadersVisible = false;
 
+        }
+        private void CarregarObjetivos()
+        {
+            string connString = "Server=(localdb)\\MSSQLLocalDB;Database=SmartWorkout;Trusted_Connection=True";
+
+            string query = @"
+    SELECT 
+        O.Id,
+        O.IdUtilizador,
+        O.Notas,
+        O.DuracaoMeta,
+        O.TipoTreinoDesejado,
+        O.DataLimite,
+        ISNULL(TT.Nome, 'Todos os tipos') AS TipoTreino,
+        ISNULL(SUM(T.Duracao), 0) AS TotalFeito
+    FROM Objetivos O
+    LEFT JOIN TipoTreino TT ON O.TipoTreinoDesejado = TT.Id
+    LEFT JOIN Treinos T ON 
+        T.IdUtilizador = O.IdUtilizador
+        AND (O.TipoTreinoDesejado IS NULL OR T.IdTipoTreino = O.TipoTreinoDesejado)
+        AND T.Data <= O.DataLimite
+    WHERE O.IdUtilizador = @id
+    GROUP BY 
+        O.Id, 
+        O.IdUtilizador, 
+        O.Notas, 
+        O.DuracaoMeta, 
+        O.TipoTreinoDesejado, 
+        O.DataLimite, 
+        TT.Nome
+";
+
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", SessaoUtilizador.Id);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridViewObjetivos.DataSource = dt;
+                    dataGridViewObjetivos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                }
+            }
         }
         private void main_Load(object sender, EventArgs e)
         {

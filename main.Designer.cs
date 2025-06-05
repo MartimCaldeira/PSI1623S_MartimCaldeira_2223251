@@ -59,7 +59,11 @@
             this.smartWorkoutDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDeTreinosTreinosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewObjetivos = new System.Windows.Forms.DataGridView();
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracaoMetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataLimiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.objetivosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.smartWorkoutDataSet13 = new preprojetopap.SmartWorkoutDataSet13();
             this.objetivosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -76,10 +80,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.objetivosTableAdapter1 = new preprojetopap.SmartWorkoutDataSet13TableAdapters.ObjetivosTableAdapter();
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duracaoMetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataLimiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -97,7 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet3BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDeTreinosTreinosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObjetivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).BeginInit();
@@ -309,23 +309,51 @@
             this.chart1.TabIndex = 6;
             this.chart1.Text = "chart1";
             // 
-            // dataGridView2
+            // dataGridViewObjetivos
             // 
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewObjetivos.AllowUserToDeleteRows = false;
+            this.dataGridViewObjetivos.AllowUserToOrderColumns = true;
+            this.dataGridViewObjetivos.AutoGenerateColumns = false;
+            this.dataGridViewObjetivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewObjetivos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tipoTreinoDesejadoDataGridViewTextBoxColumn,
             this.duracaoMetaDataGridViewTextBoxColumn,
             this.dataLimiteDataGridViewTextBoxColumn,
             this.Notas});
-            this.dataGridView2.DataSource = this.objetivosBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(352, 244);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(448, 124);
-            this.dataGridView2.TabIndex = 7;
+            this.dataGridViewObjetivos.DataSource = this.objetivosBindingSource1;
+            this.dataGridViewObjetivos.Location = new System.Drawing.Point(352, 244);
+            this.dataGridViewObjetivos.Name = "dataGridViewObjetivos";
+            this.dataGridViewObjetivos.ReadOnly = true;
+            this.dataGridViewObjetivos.Size = new System.Drawing.Size(448, 124);
+            this.dataGridViewObjetivos.TabIndex = 7;
+            // 
+            // tipoTreinoDesejadoDataGridViewTextBoxColumn
+            // 
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.DataPropertyName = "TipoTreinoDesejado";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.HeaderText = "TipoTreinoDesejado";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.Name = "tipoTreinoDesejadoDataGridViewTextBoxColumn";
+            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duracaoMetaDataGridViewTextBoxColumn
+            // 
+            this.duracaoMetaDataGridViewTextBoxColumn.DataPropertyName = "DuracaoMeta";
+            this.duracaoMetaDataGridViewTextBoxColumn.HeaderText = "DuracaoMeta";
+            this.duracaoMetaDataGridViewTextBoxColumn.Name = "duracaoMetaDataGridViewTextBoxColumn";
+            this.duracaoMetaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataLimiteDataGridViewTextBoxColumn
+            // 
+            this.dataLimiteDataGridViewTextBoxColumn.DataPropertyName = "DataLimite";
+            this.dataLimiteDataGridViewTextBoxColumn.HeaderText = "DataLimite";
+            this.dataLimiteDataGridViewTextBoxColumn.Name = "dataLimiteDataGridViewTextBoxColumn";
+            this.dataLimiteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Notas
+            // 
+            this.Notas.DataPropertyName = "Notas";
+            this.Notas.HeaderText = "Notas";
+            this.Notas.Name = "Notas";
+            this.Notas.ReadOnly = true;
             // 
             // objetivosBindingSource1
             // 
@@ -524,34 +552,6 @@
             // 
             this.objetivosTableAdapter1.ClearBeforeFill = true;
             // 
-            // tipoTreinoDesejadoDataGridViewTextBoxColumn
-            // 
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.DataPropertyName = "TipoTreinoDesejado";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.HeaderText = "TipoTreinoDesejado";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.Name = "tipoTreinoDesejadoDataGridViewTextBoxColumn";
-            this.tipoTreinoDesejadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // duracaoMetaDataGridViewTextBoxColumn
-            // 
-            this.duracaoMetaDataGridViewTextBoxColumn.DataPropertyName = "DuracaoMeta";
-            this.duracaoMetaDataGridViewTextBoxColumn.HeaderText = "DuracaoMeta";
-            this.duracaoMetaDataGridViewTextBoxColumn.Name = "duracaoMetaDataGridViewTextBoxColumn";
-            this.duracaoMetaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataLimiteDataGridViewTextBoxColumn
-            // 
-            this.dataLimiteDataGridViewTextBoxColumn.DataPropertyName = "DataLimite";
-            this.dataLimiteDataGridViewTextBoxColumn.HeaderText = "DataLimite";
-            this.dataLimiteDataGridViewTextBoxColumn.Name = "dataLimiteDataGridViewTextBoxColumn";
-            this.dataLimiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Notas
-            // 
-            this.Notas.DataPropertyName = "Notas";
-            this.Notas.HeaderText = "Notas";
-            this.Notas.Name = "Notas";
-            this.Notas.ReadOnly = true;
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,7 +560,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewObjetivos);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -590,7 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet3BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDeTreinosTreinosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObjetivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smartWorkoutDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objetivosBindingSource)).EndInit();
@@ -637,7 +637,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn notasDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Button btnHam;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewObjetivos;
         private System.Windows.Forms.Button button6;
         private SmartWorkoutDataSet10 smartWorkoutDataSet10;
         private System.Windows.Forms.BindingSource objetivosBindingSource;

@@ -104,5 +104,10 @@ namespace preprojetopap
                 TextBox2.PasswordChar = '*';
             }
         }
+
+        private void CriarNovaContaNova_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
