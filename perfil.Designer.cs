@@ -49,8 +49,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -78,9 +76,7 @@
             this.guna2Panel1.AutoRoundedCorners = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2Panel1.BorderRadius = 78;
-            this.guna2Panel1.Controls.Add(this.guna2Button4);
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
+            this.guna2Panel1.BorderRadius = 54;
             this.guna2Panel1.Controls.Add(this.guna2Button2);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -89,7 +85,7 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Location = new System.Drawing.Point(268, 180);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(376, 159);
+            this.guna2Panel1.Size = new System.Drawing.Size(376, 111);
             this.guna2Panel1.TabIndex = 13;
             // 
             // guna2Button2
@@ -333,41 +329,6 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderRadius = 10;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(260, 117);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(97, 38);
-            this.guna2Button3.TabIndex = 9;
-            this.guna2Button3.Text = "Eleminar perfil";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(92)))), ((int)(((byte)(215)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(146, 117);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(97, 38);
-            this.guna2Button4.TabIndex = 10;
-            this.guna2Button4.Text = "Logout";
-            // 
             // perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +378,5 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Button button6;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }
