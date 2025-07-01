@@ -1,4 +1,5 @@
 📱 FitTracker
+
 📝 Descrição
 
 O FitTracker é uma aplicação Windows Forms desenvolvida em C#, que permite aos utilizadores registar, monitorizar e analisar as suas atividades físicas.
