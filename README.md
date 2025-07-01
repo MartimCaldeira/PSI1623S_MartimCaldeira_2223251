@@ -59,4 +59,4 @@ Com uma **interface de navegação lateral moderna e intuitiva**, a aplicação 
 
 1. **Clone o repositório:**  
    ```bash
-   git clone <link-do-repositório>
+   git clone (https://github.com/MartimCaldeira/PSI1623S_MartimCaldeira_2223251)
